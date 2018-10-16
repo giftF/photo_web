@@ -3,3 +3,5 @@
 python manage.py makemigrations  #生成migrations
 
 python manage.py migrate   #应用migrations
+
+123
