@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ text }}
+<form action="/add_photo/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    照片标题：<input type="text" name="title"><br>
+    照片说明：<input type="text" name="the_text"><br>
+    <input type="text" name="catalog_id" value="{{ catalog_id }}" style="display:none"><br>
+    <input type="file" name="img"><br>
+    <input type="submit" value="添加">
+</form>
+</body>
+</html>

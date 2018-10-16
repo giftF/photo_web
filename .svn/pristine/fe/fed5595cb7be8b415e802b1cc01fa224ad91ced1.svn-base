@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>身份验证</title>
+</head>
+<body>
+{{ text }}
+<form action="/validate/" method="POST">
+    {% csrf_token %}
+  <p>请输入口令: <input type="text" name="answer" /></p>
+  <input type="submit" value="提交" />
+</form>
+</body>
+</html>
