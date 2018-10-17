@@ -10,10 +10,9 @@
 </head>
 <body>
 <a href="/found/">创建</a>
-{{ photo_catalog }}
 {% for catalog in photo_catalog %}
 	<div class="polaroid">
-	<img src="/{{ catalog.photo_url }}" alt="Colloseum" />
+	<img src="/static/images/{{ catalog.photo_url }}" alt="Colloseum" />
 	<p>{{ catalog.title }}<br>
 		<a href="/to_edit_catalog/?catalog_id={{ catalog.id }}">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="/delete_catalog/?catalog_id={{ catalog.id }}">删除</a>

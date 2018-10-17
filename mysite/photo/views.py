@@ -95,6 +95,7 @@ def add_validate(request):
         return render(request, 'add_catalog_validate.html')
     txt = open('answer.csv','r')
     answer = txt.read()
+    answer = answer.replace('\n', '').replace('\t', '')
     if the_answer == answer:
         if not models.time_limits.objects.filter(ip='%s' % ip).update(update_time='%s' % t, channel='9999'):
             models.time_limits.objects.create(ip='%s' % ip, update_time='%s' % t, channel='9999')
@@ -116,10 +117,20 @@ def found_result(request):
         title = request.POST['title']
         channel = request.POST['channel']
         photo = request.FILES['img']
+        HS = request.POST['HS']
     except:
         photo_catalog = models.catalog.objects.values().filter(is_show=1)
         return render(request, 'edit_catalog.html', {'photo_catalog': photo_catalog})
-    if models.catalog.objects.create(title=title,photo_url=photo,channel=channel,is_show=1):
+    print(str(photo).split('.')[1].upper())
+    if str(photo).split('.')[1].upper() not in ['JPG','JPEG','PNG']:
+        return render(request, 'add_catalog.html', {'text':'只能上传jpg\jpeg\png格式的图片'})
+    l = str(photo).split('.')
+    l_url = l[0] + str(time.time()).split('.')[0] +  '.' + l[1]
+    photo = Image.open(photo)
+    if HS == '2':
+        photo = photo.rotate(270)
+    photo.save('./photo/static/images/%s'%l_url)
+    if models.catalog.objects.create(title=title,photo_url=l_url,channel=channel,is_show=1):
         photo_catalog = models.catalog.objects.values().filter(is_show=1)
         return render(request, 'edit_catalog.html', {'photo_catalog': photo_catalog})
     return render(request, 'add_catalog.html', {'text':'创建失败'})
@@ -161,15 +172,25 @@ def add_photo(request):
         text = request.POST['the_text']
         catalog_id = request.POST['catalog_id']
         photo = request.FILES['img']
+        HS = request.POST['HS']
     except:
         photo_catalog = models.catalog.objects.values().filter(is_show=1)
         return render(request, 'edit_catalog.html', {'photo_catalog': photo_catalog})
-    image = Image.open(photo)
+    if str(photo).split('.')[1].upper() not in ['JPG','JPEG','PNG']:
+        return render(request, 'add_photo.html', {'catalog_id': catalog_id, 'text':'只能上传jpg\jpeg\png格式的图片'})
+    l = str(photo).split('.')
+    l_url = l[0] + str(time.time()).split('.')[0] + '.' + l[1]
+    photo = Image.open(photo)
+    if HS == '2':
+        photo = photo.rotate(270)
+    photo.save('./photo/static/images/%s' % l_url)
+
+    image = Image.open('./photo/static/images/%s' % l_url)
     image = image.resize((35, 35), Image.ANTIALIAS)
     name = str(photo).split('.')[0]
-    n = '%s.JPEG'%(name + str(time.time())[:10])
+    n = '35%s'%l_url
     image.save('./photo/static/images/%s' % n, 'JPEG', quality=90)
-    if models.photos.objects.create(title=title,catalog_id=catalog_id,is_show=1,photo_url=photo,mini_url=n,text=text):
+    if models.photos.objects.create(title=title,catalog_id=catalog_id,is_show=1,photo_url=l_url,mini_url=n,text=text):
         photo_list = models.photos.objects.values().filter(is_show=1, catalog_id=catalog_id)
         return render(request, 'edit_photo.html', {'photos': photo_list, 'catalog_id': catalog_id})
     return render(request, 'add_photo.html', {'catalog_id': catalog_id})
@@ -201,3 +222,4 @@ def logout(request):
         ip = request.META['REMOTE_ADDR']
     models.time_limits.objects.filter(ip=ip).update(update_time=0)
     return render(request, 'login.html')
+

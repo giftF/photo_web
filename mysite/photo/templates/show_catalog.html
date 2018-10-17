@@ -15,7 +15,7 @@
 </form>
 {% for catalog in photo_catalog %}
 	<div class="polaroid">
-	<img src="/{{ catalog.photo_url }}" alt="Colloseum" />
+	<img src="/static/images/{{ catalog.photo_url }}" alt="Colloseum" />
 	<p><a href="/show_photo/?catalog_id={{catalog.id}}">{{ catalog.title }}</a><br>
 	</p>
 </div>

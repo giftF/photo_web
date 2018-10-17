@@ -16,7 +16,7 @@ class answers(models.Model):
 # 相册目录表
 class catalog(models.Model):
     title = models.CharField(max_length=10,null=False)
-    photo_url = models.ImageField(upload_to='static/images', max_length=255)
+    photo_url = models.CharField(max_length=255,null=True)
     channel = models.IntegerField()
     is_show = models.IntegerField()
 
@@ -24,7 +24,7 @@ class catalog(models.Model):
 class photos(models.Model):
     title = models.CharField(max_length=50,null=False)
     text = models.CharField(max_length=50,null=True)
-    photo_url = models.ImageField(upload_to='static/images', max_length=255)
+    photo_url = models.CharField(max_length=255,null=True)
     mini_url = models.CharField(max_length=255,null=True)
     catalog_id = models.IntegerField(null=False, default=1)
     is_show = models.IntegerField()

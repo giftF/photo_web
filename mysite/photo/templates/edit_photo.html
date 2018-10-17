@@ -11,7 +11,7 @@
 <a href="/to_add_photo/?catalog_id={{ catalog_id }}">添加</a>
 {% for photo in photos %}
 <dir id="{{ photo.id }}">
-    <img src="/{{ photo.photo_url }}" height="200" width="200">
+    <img src="/static/images/{{ photo.photo_url }}" height="200" width="200">
     <h4 style="margin-top:1px;margin-bottom:1px;">{{ photo.title }}&nbsp;&nbsp;&nbsp;&nbsp;<a href="/delete_photo/?id={{ photo.id }}&catalog_id={{ catalog_id }}">删除</a></h4>
     <p style="margin-top:1px;margin-bottom:10px;">{{ photo.text }}</p>
 </dir>
