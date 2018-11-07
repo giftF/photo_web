@@ -151,3 +151,5 @@ STATICFILES_FINDERS = (
 
 MEDIA_URL = '/photo/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'photo').replace('\\', '/')
+
+STATIC_ROOT = '/photo/templates'

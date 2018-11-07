@@ -223,3 +223,13 @@ def logout(request):
     models.time_limits.objects.filter(ip=ip).update(update_time=0)
     return render(request, 'login.html')
 
+# 编辑员注销
+def edit_logout(request):
+    if not validate_root_ip(request):
+        return render(request, 'login.html')
+    try:
+        ip = request.META['HTTP_X_FORWARDED_FOR']
+    except:
+        ip = request.META['REMOTE_ADDR']
+    models.time_limits.objects.filter(ip=ip).update(update_time=0)
+    return render(request, 'login.html')

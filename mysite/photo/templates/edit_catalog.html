@@ -9,7 +9,14 @@
 <script type="text/javascript" src="/static/js/script.js"></script>
 </head>
 <body>
-<a href="/found/">创建</a>
+<div class="polaroid">
+	<img src="/static/images/damo.jpg" alt="Colloseum" />
+	<p>{{ catalog.title }}<br>
+		<a href="/found/">创建</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/edit_logout/">注销</a>
+	</p>
+</div>
+
 {% for catalog in photo_catalog %}
 	<div class="polaroid">
 	<img src="/static/images/{{ catalog.photo_url }}" alt="Colloseum" />

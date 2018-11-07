@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>身份验证</title>
+<style type="text/css">
+body {
+background-image:url("/static/images/bg.jpg");
+no-repeat center center fixed;
+background-size: contain;
+height:650px;
+}
+form {
+background-image:url("/static/images/login.png");
+width:368px;
+height:381px;
+margin-top:255px;
+margin-left:750px;
+}
+.divinform{
+padding-top:300px;
+}
+</style>
 </head>
 <body>
-{{ text }}
-<form action="/validate/" method="POST">
+<form action="/validate/" method="POST" style="text-align:center;">
+	<div class="divinform">
+	{{ text }}
     {% csrf_token %}
-  <p>请输入口令: <input type="text" name="answer" /></p>
-  <input type="submit" value="提交" />
+  <p>请输入口令: <input type="text" name="answer"></p>
+  <input type="submit" value="提交">
+	<a href="/add_validate">编辑相册</a>
+		</div>
 </form>
-<a href="/add_validate">编辑相册</a>
+
 </body>
 </html>

@@ -33,4 +33,5 @@ urlpatterns = [
     url(r'^show_photo/', views.show_photo),
     url(r'^return_catalog/', views.return_catalog),
     url(r'^logout/', views.logout),
+    url(r'^edit_logout/', views.edit_logout),
 ]
