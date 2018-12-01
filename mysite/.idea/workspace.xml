@@ -15,7 +15,7 @@
     <session id="-53750722">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.14" value="1" />
@@ -66,111 +66,49 @@
     <session id="1855481207">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="24" />
           <entry key="js" value="2" />
-          <entry key="py" value="3" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="24" />
           <entry key="JavaScript" value="2" />
-          <entry key="Python" value="3" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="724" />
-          <entry key="py" value="1291" />
+          <entry key="py" value="1293" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="724" />
-          <entry key="Python" value="1291" />
+          <entry key="Python" value="1293" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/photo/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4180">
-              <caret line="226" column="4" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#769#994#0" />
-                <marker date="1540453843120" expanded="true" signature="1029:1034" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="2110:2399" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="3951:3956" ph="..." />
-                <marker date="1540453843120" expanded="false" signature="4058:4063" ph="..." />
-                <marker date="1540453843120" expanded="false" signature="4240:4245" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="5447:5448" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="5851:5852" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="6215:6216" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="6646:7528" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="8182:8183" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="8632:8633" ph="..." />
-                <marker date="1540453843120" expanded="true" signature="8908:8909" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-              <folding>
-                <element signature="e#630#662#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/photo/templates/edit_catalog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="63" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/photo/templates/show_catalog.html">
+        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/photo/templates/add_catalog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/photo/templates/add_catalog_validate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+            <state relative-caret-position="224">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -234,12 +172,12 @@
         <option value="$PROJECT_DIR$/photo/templates/show_photo.html" />
         <option value="$PROJECT_DIR$/photo/templates/五种登录/index.html" />
         <option value="$USER_HOME$/Desktop/test.py" />
-        <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/photo/templates/login.html" />
         <option value="$PROJECT_DIR$/photo/templates/add_catalog_validate.html" />
         <option value="$PROJECT_DIR$/photo/views.py" />
         <option value="$PROJECT_DIR$/mysite/urls.py" />
         <option value="$PROJECT_DIR$/photo/templates/edit_catalog.html" />
+        <option value="$PROJECT_DIR$/mysite/settings.py" />
       </list>
     </option>
   </component>
@@ -249,11 +187,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="667" />
-    <option name="y" value="4" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="666" />
+    <option name="y" value="3" />
     <option name="width" value="960" />
-    <option name="height" value="1040" />
+    <option name="height" value="1041" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -268,35 +206,6 @@
             <path>
               <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="photo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="photo" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="photo" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="photo" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -413,7 +322,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="runserver 0.0.0.0:8000" />
+      <option name="PARAMETERS" value="runserver_plus --cert server.crt 0.0.0.0:8088" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -458,7 +367,7 @@
     </recent_temporary>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\G\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -472,15 +381,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12152502" />
       <window_info id="Structure" order="1" weight="0.2494043" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" visible="true" weight="0.32661718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.32562277" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -635,13 +543,6 @@
     <entry file="file://$PROJECT_DIR$/photo/static/images/login.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/photo/templates/add_photo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -665,48 +566,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/photo/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4180">
-          <caret line="226" column="4" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#769#994#0" />
-            <marker date="1540453843120" expanded="true" signature="1029:1034" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="2110:2399" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="3951:3956" ph="..." />
-            <marker date="1540453843120" expanded="false" signature="4058:4063" ph="..." />
-            <marker date="1540453843120" expanded="false" signature="4240:4245" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="5447:5448" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="5851:5852" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="6215:6216" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="6646:7528" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="8182:8183" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="8632:8633" ph="..." />
-            <marker date="1540453843120" expanded="true" signature="8908:8909" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3724">
+          <caret line="234" column="4" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/photo/templates/add_catalog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/photo/templates/add_catalog_validate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        <state relative-caret-position="266">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -720,7 +602,14 @@
     <entry file="file://$PROJECT_DIR$/photo/templates/show_catalog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
         </state>
       </provider>
     </entry>
