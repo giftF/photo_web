@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/mini_add/" enctype="multipart/form-data" method="POST">
+        题目：<input type="text" name="title" value="{{text.title}}"><br>
+        作者：<input type="text" name="author" value="{{text.author}}"><br>
+        正文：<textarea name="body" rows="10" cols="30">{{text.body}}</textarea><br>
+        录音：<input type="file" name="dubbing">{{text.dubbing}}<br>
+        朗读人：<input type="text" name="dubbing_user" value="{{text.dubbing_user}}"><br>
+        <div style="display:none;">
+        <input type="file" name="dubbing_1" style="display:none;">{{text.dubbing_1}}<br>
+        <input type="file" name="dubbing_2" style="display:none;">{{text.dubbing_2}}<br>
+        <input type="text" name="id" value="{{text.id}}" style="display:none;"></div>
+        <input type="submit" value="提交"><br>{% csrf_token %}
+    </form>
+</body>
+</html>

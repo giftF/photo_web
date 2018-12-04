@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-from photo import views
+from photo import views, mini_background, mini_nose
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,4 +34,14 @@ urlpatterns = [
     url(r'^return_catalog/', views.return_catalog),
     url(r'^logout/', views.logout),
     url(r'^edit_logout/', views.edit_logout),
+    url(r'^mini/', mini_background.mini_index),
+    url(r'^mini_login/', mini_background.mini_login),
+    url(r'^mini_find/', mini_background.mini_find),
+    url(r'^mini_add_page/', mini_background.mini_add_page),
+    url(r'^mini_add/', mini_background.mini_add),
+    url(r'^mini_edit_page/$', mini_background.mini_edit_page),
+    url(r'^mini_delete/$', mini_background.mini_delete),
+    url(r'^mini_setuser/', mini_nose.mini_setuser),
+    url(r'^mini_read/', mini_nose.mini_read),
+    url(r'^mini_search/', mini_nose.mini_search),
 ]
