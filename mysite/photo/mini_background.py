@@ -34,7 +34,9 @@ def is_login(request):
 
 # 后台登录页面
 def mini_index(request):
-    is_login(request)
+    token = is_login(request)
+    if type(token) != str:
+        return token
     return render(request, 'mini/mini_index.html')
 
 # 后台登录
@@ -55,7 +57,9 @@ def mini_login(request):
 
 # 查询接口
 def mini_find(request):
-    is_login(request)
+    token = is_login(request)
+    if type(token) != str:
+        return token
     try:
         text = request.POST['search']
         t = ''
@@ -70,7 +74,9 @@ def mini_find(request):
 
 # 跳转新增页面
 def mini_add_page(request):
-    is_login(request)
+    token = is_login(request)
+    if type(token) != str:
+        return token
     return render(request, 'mini/mini_add.html')
 
 # 新增
@@ -142,12 +148,16 @@ def mini_add(request):
 
 # 跳转编辑页面
 def mini_edit_page(request):
-    is_login(request)
+    token = is_login(request)
+    if type(token) != str:
+        return token
     text = models.mini_poetry.objects.values().filter(id=request.GET['id'])[0]
     return render(request, 'mini/mini_add.html', {'text': text})
 
 # 删除
 def mini_delete(request):
-    is_login(request)
+    token = is_login(request)
+    if type(token) != str:
+        return token
     models.mini_poetry.objects.filter(id=request.GET['id']).delete()
     return mini_find(request)
