@@ -27,7 +27,7 @@ def is_login(request):
         token = request.session['token']
     except:
         return render(request, 'mini/mini_login.html', {'text': '请登录!'})
-    if models.mini_nuser.objects.filter(token=token):
+    if models.mini_nuser.objects.filter(token=token) and len(token) > 5:
         return token
     else:
         return render(request, 'mini/mini_login.html', {'text': 'token失效，请重新登录'})
@@ -78,13 +78,18 @@ def mini_add(request):
     token = is_login(request)
     if type(token) != str:
         return token
-    title = request.POST['title']
-    author = request.POST['author']
-    body = request.POST['body']
-    dubbing = request.FILES.get("dubbing", None)
-    dubbing_user = request.POST['dubbing_user']
-    dubbing_1 = request.FILES.get("dubbing_1", None)
-    dubbing_2 = request.FILES.get("dubbing_2", None)
+    try:
+        title = request.POST['title']
+        author = request.POST['author']
+        body = request.POST['body']
+        dubbing = request.FILES.get("dubbing", None)
+        dubbing_user = request.POST['dubbing_user']
+        dubbing_1 = request.FILES.get("dubbing_1", None)
+        dubbing_2 = request.FILES.get("dubbing_2", None)
+        if not title or not author or not body:
+            return render(request, 'mini/mini_add.html', {'text': {'text': '新增失败'}})
+    except:
+        return render(request, 'mini/mini_index.html')
     if dubbing:
         url = '/photo/static/tapes/' + str(time.time()).split('.')[0] + dubbing.name
         destination = open(os.path.join("./photo/static/tapes", str(time.time()).split('.')[0] + dubbing.name), 'wb+')  # 打开特定的文件进行二进制的写操作
@@ -128,7 +133,7 @@ def mini_add(request):
         try:
             models.mini_poetry.objects.create(title=title, author=author, body=body, dubbing=dubbing, dubbing_user=dubbing_user, dubbing_1=dubbing_1, dubbing_2=dubbing_2, edit=edit, created_time=str(time.time()).split('.')[0])
         except:
-            return render(request, 'mini/mini_add.html', {'text': '新增失败'})
+            return render(request, 'mini/mini_add.html', {'text': {'text': '新增失败'}})
     elif dubbing is not None:
         models.mini_poetry.objects.filter(id=request.POST['id']).update(title=title, author=author, body=body, dubbing=dubbing, dubbing_user=dubbing_user)
     else:
