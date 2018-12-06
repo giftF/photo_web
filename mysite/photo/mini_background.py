@@ -23,15 +23,14 @@ def md5_passwd(passwd):
 
 # 验证登录
 def is_login(request):
-    # try:
-    #     token = request.session['token']
-    # except:
-    #     return render(request, 'mini/mini_login.html', {'text': '请登录!'})
-    # if models.mini_nuser.objects.filter(token=token) and len(token) > 5:
-    #     return token
-    # else:
-    #     return render(request, 'mini/mini_login.html', {'text': 'token失效，请重新登录'})
-    return 'c5690c156a059ca74e876912703c0446'
+    try:
+        token = request.session['token']
+    except:
+        return render(request, 'mini/mini_login.html', {'text': '请登录!'})
+    if models.mini_nuser.objects.filter(token=token) and len(token) > 5:
+        return token
+    else:
+        return render(request, 'mini/mini_login.html', {'text': 'token失效，请重新登录'})
 
 # 后台登录页面
 def mini_index(request):
