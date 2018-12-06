@@ -19,7 +19,6 @@ code = {
 def damo(request):
     a = {'id': 1}
     x = models.mini_poetry.objects.values().filter(**a)
-    print(x)
     resp = {'a': 1, 'b': 2}
     return HttpResponse(json.dumps(resp, ensure_ascii=False), content_type="application/json")
 
@@ -72,9 +71,6 @@ def mini_read(request):
     index = random.randint(0, last)
     texts = models.mini_poetry.objects.values().all()[index]
     models.mini_history.objects.create(user_id=user_id, poetry_id=texts['id'])
-    print(texts['body'])
-    print('------------------------------------')
-    print(str(texts['body']))
     resp = {'text': texts, 'prey': prey, 'next': 0, 'code': 1, 'msg': None}
     return HttpResponse(json.dumps(resp, ensure_ascii=False), content_type="application/json")
 
@@ -84,8 +80,11 @@ def mini_search(request):
     handle = request.POST['handle']
     # 按关键字搜索
     if handle == 'search':
-        print('进入了搜索')
-        search = request.POST['search']
+        text = request.POST['search']
+        t = ''
+        for i in text:
+            t += '%s|' % i
+        search = t[:-1]
         try:
             prey = models.mini_history.objects.values('poetry_id').filter(user_id=user_id).order_by('-id')[0][
                 'poetry_id']
@@ -113,7 +112,6 @@ def mini_search(request):
             return HttpResponse(json.dumps(resp, ensure_ascii=False), content_type="application/json")
     # 查看上一首
     elif handle == 'prey':
-        print('进入了上一首')
         prey_old = request.POST['prey']
         try:
             prey = models.mini_history.objects.values('id').filter(Q(user_id=user_id) & Q(id__lt=prey_old)).order_by('-id')[0][
@@ -130,7 +128,6 @@ def mini_search(request):
         return HttpResponse(json.dumps(resp, ensure_ascii=False), content_type="application/json")
     # 查看下一首
     elif handle == 'next':
-        print('进入了下一首')
         next_old = request.POST['next']
         try:
             prey = models.mini_history.objects.values('id').filter(Q(user_id=user_id) & Q(id__lt=next_old)).order_by('-id')[0][
@@ -147,5 +144,4 @@ def mini_search(request):
         return HttpResponse(json.dumps(resp, ensure_ascii=False), content_type="application/json")
     # 随机查看
     else:
-        print('进入了随机看')
         return mini_read(request)

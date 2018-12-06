@@ -50,8 +50,8 @@ class mini_nuser(models.Model):
 # 诗词表
 class mini_poetry(models.Model):
     # id = models.AutoField()  # 文章id
-    title = models.CharField(max_length=50, null=False)  # 诗词标题
-    author = models.CharField(max_length=20, null=False)  # 作者
+    title = models.TextField(null=False)  # 诗词标题
+    author = models.TextField(null=False)  # 作者
     body = models.TextField(null=False)  # 正文
     dubbing = models.CharField(max_length=50, null=True)  # 朗读配音1
     dubbing_user = models.CharField(max_length=30, null=True)  # 提供人
